@@ -1,5 +1,24 @@
 //замикання
 
+// function createNewSum(n) {
+//     return function () {
+//         console.log(10*n);
+//     }
+// }
+
+// const calc = createNewSum(5);
+// calc();
+
+// function createNewNumber (n) {
+//     return function (num) {
+//         return n + num;
+//     }
+// }
+
+// const addFive = createNewNumber (5);
+// console.log(addFive(10));
+
+
 // function createUrl(domain) {
 //   return function (url) {
 //     return `https://${url}.${domain}`;
@@ -19,7 +38,7 @@
 //_________________________//
 //this
 
-// function hello() {
+// function hello () {
 //   console.log("hello", this);
 // }
 
@@ -44,7 +63,7 @@
 // document.querySelector("p").onclick = abc;
 
 // function changeColor() {
-//   this.style.background = "green";
+//     this.style.background = "green";
 // }
 
 // // document.querySelector("div").onclick = changeColor;
@@ -68,7 +87,7 @@
 //   showList: showList,
 // };
 
-// list.showList();
+// list.showList(); // у стрілочних функціях this немає
 
 //========= bind
 
@@ -87,6 +106,7 @@
 //     console.log(`City is ${city}`);
 //   },
 // };
+// user.info();
 
 // const Ann = {
 //   name: "Anna",
@@ -185,6 +205,7 @@
 //   items: ["майка, шорти"],
 // };
 
+
 // document
 //   .querySelector("#wom")
 //   .addEventListener("click", cart.showItems.bind(woman));
@@ -196,7 +217,7 @@
 // document
 //   .querySelector("#kid")
 //   .addEventListener("click", cart.showItems.bind(child));
-// ////
+////
 
 // const infoCar = {
 //   name: "BMW",
@@ -215,6 +236,8 @@
 //   color: "red",
 // };
 
-// infoCar.showInfo.bind(car2)();
+// infoCar.showInfo.bind(infoCar)();
 // infoCar.showInfo.call(car2);
 // infoCar.showInfo.apply(car2);
+
+
